@@ -526,6 +526,12 @@ body.menu-open { overflow: hidden; }
 .hero-badge b { font-size: .92rem; }
 .hero-badge span { font-size: .72rem; }
 
+/* ---------- Small screens (<= 899px): hero flows with content ---------- */
+@media (max-width: 899px) {
+  .hero { min-height: auto; display: block; padding-top: 92px; padding-bottom: 48px; }
+  .hero-inner { align-items: stretch; }
+}
+
 /* ---------- Tablet / small desktop (>= 640px) ---------- */
 @media (min-width: 640px) {
   .stat-grid { gap: clamp(16px, 3vw, 32px); }
