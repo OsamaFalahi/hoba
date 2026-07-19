@@ -5,7 +5,7 @@
   <div class="container header-inner">
     <a href="index.html" class="brand">
       <img alt="Hoba Hair Logo" src="assets/img/logo.png"/>
-      <span>HOBA HAIR</span>
+      <span class="brand-name">HOBA HAIR</span>
     </a>
     <nav class="nav">
       <a href="index.html">الرئيسية</a>
@@ -60,9 +60,9 @@
       <div>
         <h4>حساباتنا</h4>
         <div class="social">
-          <a href="https://www.instagram.com/reel/DVt06uGDNWn/?igsh=MXJoM3J6bzBuZTM4" target="_blank" rel="noopener"><span class="material-symbols-outlined">photo_camera</span> إنستقرام</a>
-          <a href="https://vt.tiktok.com/ZSuyUYRmM/" target="_blank" rel="noopener"><span class="material-symbols-outlined">music_note</span> تيك توك</a>
-          <a href="https://www.snapchat.com/add/hoba_salon?share_id=ucyETMV7TVCS_CaU716qTA&locale=ar_SA@calendar=gregorian" target="_blank" rel="noopener"><span class="material-symbols-outlined">camera</span> سناب شات</a>
+          <a class="ig" href="https://www.instagram.com/reel/DVt06uGDNWn/?igsh=MXJoM3J6bzBuZTM4" target="_blank" rel="noopener" aria-label="إنستقرام"><span class="material-symbols-outlined">photo_camera</span><span class="lbl">إنستقرام</span></a>
+          <a class="tt" href="https://vt.tiktok.com/ZSuyUYRmM/" target="_blank" rel="noopener" aria-label="تيك توك"><span class="material-symbols-outlined">music_note</span><span class="lbl">تيك توك</span></a>
+          <a class="sc" href="https://www.snapchat.com/add/hoba_salon?share_id=ucyETMV7TVCS_CaU716qTA&locale=ar_SA@calendar=gregorian" target="_blank" rel="noopener" aria-label="سناب شات"><span class="material-symbols-outlined">camera</span><span class="lbl">سناب شات</span></a>
         </div>
       </div>
     </div>

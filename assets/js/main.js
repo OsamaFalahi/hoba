@@ -19,11 +19,15 @@ function initSiteInteractions() {
   const toggle = document.getElementById('menuToggle');
   const menu = document.getElementById('mobileMenu');
   const close = document.getElementById('menuClose');
-  const openMenu = () => menu && menu.classList.add('open');
-  const hideMenu = () => menu && menu.classList.remove('open');
+  const openMenu = () => { if (menu) { menu.classList.add('open'); document.body.classList.add('menu-open'); } };
+  const hideMenu = () => { if (menu) { menu.classList.remove('open'); document.body.classList.remove('menu-open'); } };
   if (toggle) toggle.addEventListener('click', openMenu);
   if (close) close.addEventListener('click', hideMenu);
-  if (menu) menu.querySelectorAll('a:not(.btn)').forEach(a => a.addEventListener('click', hideMenu));
+  if (menu) {
+    // close when tapping the dimmed backdrop area (outside the drawer)
+    menu.addEventListener('click', (e) => { if (e.target === menu) hideMenu(); });
+    menu.querySelectorAll('a:not(.btn)').forEach(a => a.addEventListener('click', hideMenu));
+  }
 
   // Back to top
   if (backTop) backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
