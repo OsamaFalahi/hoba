@@ -348,7 +348,7 @@ h1,h2,h3,h4 { font-family: var(--font-head); line-height: 1.25; margin: 0; font-
 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--primary-soft); color: #fff; }
-.footer-inner { padding-top: clamp(20px,3vw,32px); padding-bottom: clamp(48px,7vw,80px); }
+.footer-inner {padding-top: 0; padding-top: clamp(20px,3vw,32px); padding-bottom: clamp(48px,7vw,80px); }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: clamp(24px,4vw,48px); }
 .footer-grid h4 { font-family: var(--font-head); font-size: 1.2rem; color: var(--secondary-soft); margin-bottom: 16px; }
 .footer-logo { font-family: var(--font-head); font-size: 2rem; color: var(--secondary-soft); display: block; margin-bottom: 14px; }
@@ -436,6 +436,10 @@ h1,h2,h3,h4 { font-family: var(--font-head); line-height: 1.25; margin: 0; font-
   .hero-badge { right: 0; bottom: -16px; padding: 14px 16px; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .footer-bottom a { margin: 0 9px; }
+  .brand-name { display: none; }
+  .hero-bg { display: none; }
+  .about-img-grid { grid-template-columns: 1fr; }
+  .about-img-grid img { height: 240px !important; margin-top: 0 !important; }
   .btn { width: 100%; }
   .hero-cta .btn { width: 100%; }
 }
