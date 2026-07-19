@@ -256,7 +256,7 @@ body.menu-open { overflow: hidden; }
 .hero-frame {
   position: relative; border-radius: var(--radius-lg); overflow: hidden;
   box-shadow: var(--shadow-lg); border: 1px solid rgba(255,255,255,.12);
-  aspect-ratio: 4/5;
+  aspect-ratio: 16/10;
 }
 .hero-frame img { width: 100%; height: 100%; object-fit: cover; }
 .hero-frame::before {
@@ -502,7 +502,8 @@ html, body { max-width: 100%; overflow-x: hidden; }
 
 .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 32px; }
 .hero-text { order: 2; }
-.hero-media { order: 1; max-width: 420px; margin-inline: auto; }
+.hero-media { order: 1; max-width: 520px; margin-inline: auto; width: 100%; }
+.hero-frame { aspect-ratio: 16/9; }
 .hero-cta { justify-content: center; }
 .hero-badge { position: static; margin-top: 18px; padding: 14px 18px; }
 
