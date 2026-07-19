@@ -15,7 +15,7 @@
       <a href="contact.html">تواصل معنا</a>
     </nav>
     <div class="header-actions">
-      <a href="https://wa.me/96654427897" target="_blank" rel="noopener" class="icon-btn" aria-label="واتساب"><span class="material-symbols-outlined">chat</span></a>
+      <a href="https://wa.me/966544277897" target="_blank" rel="noopener" class="icon-btn" aria-label="واتساب"><span class="material-symbols-outlined">chat</span></a>
       <a href="contact.html" class="btn btn-dark" style="padding:11px 22px;font-size:.85rem">احجزي الآن</a>
       <button class="icon-btn menu-toggle" id="menuToggle" aria-label="القائمة"><span class="material-symbols-outlined">menu</span></button>
     </div>
@@ -57,18 +57,18 @@
         <p dir="ltr">+966 50 000 0000</p>
         <p>info@hobahair.com</p>
       </div>
-      <div>
-        <h4>حساباتنا</h4>
-        <div class="social">
-          <a class="ig" href="https://www.instagram.com/reel/DVt06uGDNWn/?igsh=MXJoM3J6bzBuZTM4" target="_blank" rel="noopener" aria-label="إنستقرام"><span class="material-symbols-outlined">photo_camera</span><span class="lbl">إنستقرام</span></a>
-          <a class="tt" href="https://vt.tiktok.com/ZSuyUYRmM/" target="_blank" rel="noopener" aria-label="تيك توك"><span class="material-symbols-outlined">music_note</span><span class="lbl">تيك توك</span></a>
-          <a class="sc" href="https://www.snapchat.com/add/hoba_salon?share_id=ucyETMV7TVCS_CaU716qTA&locale=ar_SA@calendar=gregorian" target="_blank" rel="noopener" aria-label="سناب شات"><span class="material-symbols-outlined">camera</span><span class="lbl">سناب شات</span></a>
+        <div>
+          <h4>حساباتنا</h4>
+          <div class="social">
+            <a class="ig" href="https://www.instagram.com/reel/DVt06uGDNWn/?igsh=MXJoM3J6bzBuZTM4" target="_blank" rel="noopener" aria-label="إنستقرام"><i class="fa-brands fa-instagram"></i><span class="lbl">إنستقرام</span></a>
+            <a class="tt" href="https://vt.tiktok.com/ZSuyUYRmM/" target="_blank" rel="noopener" aria-label="تيك توك"><i class="fa-brands fa-tiktok"></i><span class="lbl">تيك توك</span></a>
+            <a class="sc" href="https://www.snapchat.com/add/hoba_salon?share_id=ucyETMV7TVCS_CaU716qTA&locale=ar_SA@calendar=gregorian" target="_blank" rel="noopener" aria-label="سناب شات"><i class="fa-brands fa-snapchat"></i><span class="lbl">سناب شات</span></a>
+          </div>
         </div>
-      </div>
     </div>
     <div class="footer-bottom">
       <div><a href="#">سياسة الخصوصية</a><a href="#">الشروط والأحكام</a></div>
-      <p>© 2024 هوبا هير. جميع الحقوق محفوظة.</p>
+      <p>© 2026 هوبا هير. جميع الحقوق محفوظة.</p>
     </div>
   </div>
 </footer>`;

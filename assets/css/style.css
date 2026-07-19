@@ -95,7 +95,7 @@ h1,h2,h3,h4 { font-family: var(--font-head); line-height: 1.25; margin: 0; font-
 /* ---------- Typography utilities ---------- */
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
-  font-size: .72rem; font-weight: 600; letter-spacing: .22em;
+  font-size: 1rem; font-weight: 600; letter-spacing: .22em;
   text-transform: uppercase; color: var(--secondary);
   border: 1px solid rgba(230,200,120,.3);
   padding: 7px 16px; border-radius: 999px;
@@ -428,18 +428,19 @@ body.menu-open { overflow: hidden; }
   width: 48px; height: 48px; padding: 0;
   border-radius: 50%; color: #fff; font-size: .92rem; overflow: hidden;
   background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14);
-  transition: transform .35s var(--ease), background .35s, color .35s, width .35s var(--ease), border-color .35s;
+  transition: transform .3s var(--ease), background .3s, color .3s, border-color .3s, box-shadow .3s;
 }
-.social a:hover { width: auto; padding: 0 18px; border-radius: 999px; transform: translateY(-4px); }
-.social a .material-symbols-outlined { color: #fff; font-size: 1.5rem; }
+.social a .material-symbols-outlined,
+.social a > i { color: #fff; font-size: 1.5rem; transition: transform .3s var(--ease); }
 .social a .lbl { display: none; white-space: nowrap; font-weight: 600; }
-.social a:hover .lbl { display: inline; }
-.social a.ig:hover { background: #c13584; border-color: #c13584; color: #fff; }
-.social a.tt:hover { background: #000; border-color: #25f4ee; color: #fff; }
-.social a.sc:hover { background: #fffc00; border-color: #fffc00; color: #111; }
-.social a.ig:hover .material-symbols-outlined,
-.social a.tt:hover .material-symbols-outlined,
-.social a.sc:hover .material-symbols-outlined { color: inherit; }
+.social a:hover { transform: translateY(-3px); }
+.social a:hover > i { transform: scale(1.12); }
+.social a.ig:hover { background: rgba(193,53,132,.18); border-color: #c13584; color: #e9599f; box-shadow: 0 8px 22px rgba(193,53,132,.25); }
+.social a.tt:hover { background: rgba(0,0,0,.25); border-color: #25f4ee; color: #25f4ee; box-shadow: 0 8px 22px rgba(37,244,238,.2); }
+.social a.sc:hover { background: rgba(255,252,0,.12); border-color: #fffc00; color: #fffc00; box-shadow: 0 8px 22px rgba(255,252,0,.18); }
+.social a.ig:hover > i,
+.social a.tt:hover > i,
+.social a.sc:hover > i { color: inherit; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.1); margin-top: 40px; padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
 .footer-bottom a { color: #b9b3b3; font-size: .88rem; margin-inline-start: 18px; }
 .footer-bottom p { color: rgba(255,255,255,.5); font-size: .85rem; margin: 0; }
