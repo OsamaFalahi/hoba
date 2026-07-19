@@ -522,7 +522,6 @@ body.menu-open { overflow: hidden; }
 
 .btn { width: 100%; }
 .hero-cta .btn { width: 100%; }
-.hero-cta { margin-bottom: 26px; }
 .hero-badge { padding: 12px 16px; }
 .hero-badge b { font-size: .92rem; }
 .hero-badge span { font-size: .72rem; }
