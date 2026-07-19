@@ -509,10 +509,12 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .stat-grid { grid-template-columns: repeat(4, 1fr); gap: 28px; }
 .feat-grid { grid-template-columns: repeat(2, 1fr); }
 .feat.wide { grid-column: auto; }
-.why-grid { grid-template-columns: 1fr !important; gap: 28px; align-items: stretch; width: 100%; }
-.why-grid .feat-grid { margin-top: 0; width: 100%; }
+.why-grid { grid-template-columns: 1fr !important; gap: 28px; align-items: stretch; width: 100%; text-align: right; direction: rtl; }
+.why-grid .feat-grid { margin-top: 0; width: 100%; text-align: right; }
 .feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(12px,3vw,18px); width: 100%; max-width: 100%; }
-.feat { width: 100%; }
+.feat-grid > * { min-width: 0; }
+.feat { width: 100%; min-width: 0; overflow-wrap: break-word; text-align: right; direction: rtl; }
+.feat h4, .feat p { overflow-wrap: break-word; }
 .masonry { columns: 1; }
 .contact-grid { grid-template-columns: 1fr; }
 .field-row { grid-template-columns: 1fr; gap: 0; }
