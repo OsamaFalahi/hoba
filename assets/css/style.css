@@ -404,6 +404,8 @@ body.menu-open { overflow: hidden; }
   object-fit: contain;
   background: var(--surface-2);
   display: block;
+  overflow: hidden;
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 .marquee-wrap:hover .marquee-track {
   animation-play-state: paused;
