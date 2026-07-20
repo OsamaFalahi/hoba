@@ -648,29 +648,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .masonry { columns: 3; }
 }
 
-@media (max-width: 768px) {
-  .testi-card {
-    width: auto !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    background: transparent !important;
-    border: none !important;
-  }
-  .testi-card img {
-    width: auto !important;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .testi-card {
-    width: auto !important;
-  }
-  .testi-card img {
-    width: auto !important;
-    max-width: 100%;
-  }
-}
+@media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
   .hero-anim { opacity: 1; }
