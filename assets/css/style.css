@@ -622,6 +622,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
 @media (max-width: 899px) {
   .hero { min-height: auto; display: block; padding-top: 92px; padding-bottom: 48px; }
   .hero-inner { align-items: stretch; }
+  .wa-float { bottom: 24px; }
 }
 
 /* ---------- Tablet / small desktop (>= 640px) ---------- */
@@ -669,7 +670,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
 @media (max-width: 768px) {
   .testi-card .verified-badge {
     top: 6px;
-    left: -16px;
+    left: -10px;
     width: 70px;
     font-size: .5rem;
     padding: 3px 10px;
@@ -679,7 +680,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
 @media (max-width: 480px) {
   .testi-card .verified-badge {
     top: 4px;
-    left: -14px;
+    left: -8px;
     width: 55px;
     font-size: .45rem;
     padding: 2px 8px;
