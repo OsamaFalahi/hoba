@@ -1,4 +1,4 @@
-﻿/* ===== Hoba Hair - Interactions & Animations ===== */
+﻿/* ===== Hoba Salon - Interactions & Animations ===== */
 
 function initSiteInteractions() {
   const header = document.getElementById('siteHeader');

@@ -1,11 +1,15 @@
 ﻿// ===== Include shared HTML components (header & footer) =====
 (function () {
   const HEADER = `
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+.brand-name { font-family: 'Quintessential', cursive; letter-spacing: .02em; }
+</style>
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
     <a href="index.html" class="brand">
-      <img alt="Hoba Hair Logo" src="assets/img/logo.png"/>
-      <span class="brand-name">HOBA HAIR</span>
+      <img alt="Hoba Salon Logo" src="https://hobahair.com/wp-content/uploads/2026/07/logo.png"/>
+      <span class="brand-name">HOBA SALON</span>
     </a>
     <nav class="nav">
       <a href="index.html">الرئيسية</a>
@@ -40,7 +44,7 @@
     </div>
     <div class="footer-grid">
       <div>
-        <img alt="Hoba Hair Logo" src="assets/img/logo.png" style="height:54px;width:auto;margin-bottom:14px"/>
+        <img alt="Hoba Salon Logo" src="https://hobahair.com/wp-content/uploads/2026/07/logo.png" style="height:54px;width:auto;margin-bottom:14px"/>
         <p>صالونكِ الأول للجمال والرقي والعناية بالشعر في المملكة العربية السعودية.</p>
       </div>
       <div>
