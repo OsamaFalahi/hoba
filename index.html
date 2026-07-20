@@ -7,6 +7,88 @@
   <meta name="description" content="صالون هوبا هير النسائي السعودي المتخصص في العناية بالشعر، الصبغات، التسريحات والمظهر الأنيق لكل مناسبة."/>
   <link rel="stylesheet" href="assets/css/style.css?v=4"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"/>
+  <style>
+    /* ===== Testimonials Marquee (infinite loop, right to left) ===== */
+    .testimonials-section{ overflow:hidden; }
+    .marquee-wrap{
+      position:relative;
+      width:100%;
+      overflow:hidden;
+      margin-top:36px;
+      -webkit-mask-image:linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+      mask-image:linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+    }
+    .marquee-track{
+      display:flex;
+      width:max-content;
+      animation:marquee-scroll 50s linear infinite;
+    }
+    .marquee-wrap:hover .marquee-track{
+      animation-play-state:paused;
+    }
+    .marquee-group{
+      display:flex;
+      align-items:center;
+      flex-shrink:0;
+    }
+    /* RTL page: track moves from right to left visually by animating to positive X */
+    @keyframes marquee-scroll{
+      from{ transform:translateX(0); }
+      to{ transform:translateX(50%); }
+    }
+    .testi-card{
+      flex:0 0 auto;
+      width:260px;
+      margin:0 12px;
+      border-radius:16px;
+      overflow:hidden;
+      background:var(--surface-2, #f4f1ec);
+      box-shadow:0 6px 24px rgba(0,0,0,.08);
+      transition:transform .3s ease, box-shadow .3s ease;
+      position:relative;
+    }
+    .testi-card .verified-badge{
+      position:absolute;
+      top:8px;
+      left:-24px;
+      z-index:2;
+      background:var(--secondary, #e6c878);
+      color:#2a2100;
+      font-size:.6rem;
+      font-weight:700;
+      padding:4px 20px;
+      transform:rotate(-45deg);
+      box-shadow:0 4px 12px rgba(0,0,0,.12);
+      letter-spacing:.04em;
+      line-height:1.4;
+      text-align:center;
+      white-space:nowrap;
+      width:100px;
+      text-transform:uppercase;
+    }
+    .testi-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 12px 32px rgba(0,0,0,.14);
+    }
+    .testi-card img{
+      display:block;
+      width:100%;
+      height:auto;
+      object-fit:contain;
+      background:#f5f3f3;
+    }
+    @media (max-width:768px){
+      .testi-card{ width:200px; margin:0 8px; }
+      .marquee-track{ animation-duration:38s; }
+    }
+    @media (max-width:480px){
+      .testi-card{ width:160px; margin:0 6px; }
+      .marquee-track{ animation-duration:30s; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      .marquee-track{ animation:none; }
+    }
+  </style>
 </head>
 <body>
 
@@ -52,6 +134,43 @@
         <div class="stat reveal r1"><div class="num" data-target="5000" data-suffix="+">0</div><div class="lbl">عميلة سعيدة</div></div>
         <div class="stat reveal r2"><div class="num" data-target="100" data-suffix="%">0</div><div class="lbl">خصوصية تامة</div></div>
         <div class="stat reveal r3"><div class="num" data-target="6" data-suffix="+">0</div><div class="lbl">خدمات متميزة</div></div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials Carousel ===== -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="eyebrow">آراء العملاء</span>
+          <h2 class="title">ماذا تقول عميلاتنا</h2>
+          <div class="divider"></div>
+        </div>
+      </div>
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195020_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195005_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_194954_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195028_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195032_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195047_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195052_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195056_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A7%D9%A2%D9%A0_%D9%A1%D9%A9%D9%A5%D9%A1%D9%A2%D9%A3.jpg"/></div>
+          </div>
+          <div class="marquee-group" aria-hidden="true">
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195020_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195005_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_194954_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195028_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195032_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195047_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195052_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/Screenshot_20260720_195056_Maps.jpg"/></div>
+            <div class="testi-card"><span class="verified-badge">موثق</span><img loading="lazy" alt="رأي عميلة" src="https://hobahair.com/wp-content/uploads/2026/07/%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A7%D9%A2%D9%A0_%D9%A1%D9%A9%D9%A5%D9%A1%D9%A2%D9%A3.jpg"/></div>
+          </div>
+        </div>
       </div>
     </section>
 

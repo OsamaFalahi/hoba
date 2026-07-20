@@ -34,6 +34,7 @@ function initSiteInteractions() {
 }
 
 initSiteInteractions();
+equalizeTestimonialImages();
 
 // ===== Scroll reveal =====
 const revealObserver = new IntersectionObserver((entries) => {
@@ -61,6 +62,35 @@ function countUp(stat) {
     el.textContent = Math.floor(cur) + suffix;
   }, 26);
   el.dataset.done = 'true';
+}
+
+// ===== Equalize testimonial images to tallest =====
+function equalizeTestimonialImages() {
+  const images = document.querySelectorAll('.testi-card img');
+  if (!images.length) return;
+  let maxH = 0;
+  let pending = 0;
+  const apply = () => {
+    if (maxH > 0) {
+      images.forEach(img => {
+        img.style.height = maxH + 'px';
+        img.style.objectFit = 'contain';
+      });
+    }
+  };
+  images.forEach(img => {
+    if (img.complete && img.naturalHeight) {
+      if (img.naturalHeight > maxH) maxH = img.naturalHeight;
+    } else {
+      pending++;
+      img.addEventListener('load', () => {
+        if (img.naturalHeight > maxH) maxH = img.naturalHeight;
+        pending--;
+        if (pending === 0) apply();
+      });
+    }
+  });
+  if (pending === 0) apply();
 }
 
 // ===== Smooth anchor scroll =====
