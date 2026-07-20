@@ -53,8 +53,8 @@
       </div>
       <div>
         <h4>تواصلي معنا</h4>
-        <p>الرياض، حي الملقا</p>
-        <p dir="ltr">+966 50 000 0000</p>
+        <p>الرياض - حي الربيع</p>
+        <p dir="ltr">+96​65​44​27​78​97</p>
         <p>info@hobahair.com</p>
       </div>
         <div>
@@ -68,7 +68,7 @@
     </div>
     <div class="footer-bottom">
       <div><a href="#">سياسة الخصوصية</a><a href="#">الشروط والأحكام</a></div>
-      <p>© 2026 هوبا هير. جميع الحقوق محفوظة.</p>
+      <p>تم بواسطة  © 2026 <a href="https://rwabts.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">لمؤسسة روابط الرقمية لتقنية المعلومات</a></p>
     </div>
   </div>
 </footer>`;
