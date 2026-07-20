@@ -459,7 +459,7 @@ body.menu-open { overflow: hidden; }
 
 /* ---------- WhatsApp floating button ---------- */
 .wa-float {
-  position: fixed; bottom: 96px; left: 24px; z-index: 70;
+  position: fixed; bottom: 96px; right: 24px; left: auto; z-index: 70;
   width: 52px; height: 52px; border-radius: 50%;
   background: #25D366; color: #fff;
   display: grid; place-items: center;
