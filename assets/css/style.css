@@ -629,7 +629,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
 .footer-grid { grid-template-columns: 1fr; }
 .footer-bottom { flex-direction: column; text-align: center; }
 .footer-bottom a { margin: 0 9px; }
-.brand-name { display: none; }
+.brand .brand-name { display: none; }
 .hero-bg { display: none; }
 
 .btn { width: 100%; }
@@ -662,7 +662,7 @@ html, body { max-width: 100%; overflow-x: hidden; }
   .nav { display: flex; }
   .menu-toggle { display: none; }
   .header-actions .btn-dark { display: inline-flex; }
-  .brand-name { display: inline; }
+  .brand .brand-name { display: inline; }
   .hero-glow.a { top: 5%; left: 4%; }
 
   .hero-inner { grid-template-columns: 1.05fr .95fr; text-align: start; gap: clamp(30px, 5vw, 70px); }

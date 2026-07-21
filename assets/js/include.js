@@ -8,7 +8,7 @@
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
     <a href="index.html" class="brand">
-      <img alt="Hoba Salon Logo" src="https://hobahair.com/wp-content/uploads/2026/07/logo.png"/>
+      <img alt="Hoba Salon Logo" src="assets/img/logo.png"/>
       <span class="brand-name">HOBA SALON</span>
     </a>
     <nav class="nav">
@@ -44,7 +44,7 @@
     </div>
     <div class="footer-grid">
       <div>
-        <img alt="Hoba Salon Logo" src="https://hobahair.com/wp-content/uploads/2026/07/logo.png" style="height:54px;width:auto;margin-bottom:14px"/>
+        <img alt="Hoba Salon Logo" src="assets/img/logo.png" style="height:54px;width:auto;margin-bottom:14px"/>
         <p>صالونكِ الأول للجمال والرقي والعناية بالشعر في المملكة العربية السعودية.</p>
       </div>
       <div>
