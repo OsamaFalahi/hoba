@@ -1,4 +1,8 @@
-﻿// ===== Include shared HTML components (header & footer) =====
+﻿// ===== Shared layout: header, footer & common page scaffold =====
+// Single source of truth for the chrome shared by every page. Each page only
+// needs the <div id="header-mount"></div> / <div id="footer-mount"></div>
+// placeholders; the scroll-progress bar and back-to-top button are injected
+// here so individual pages don't repeat them.
 (function () {
   const HEADER = `
 <style>
@@ -57,57 +61,56 @@
       </div>
       <div>
         <h4>تواصلي معنا</h4>
-        <p>الرياض - حي الربيع</p>
-        <p dir="ltr">+96​65​44​27​78​97</p>
+        <p>الرياض، حي الربيع</p>
+        <p>+966544277897</p>
         <p>info@hobahair.com</p>
       </div>
-        <div>
-          <h4>حساباتنا</h4>
-          <div class="social">
-             <a class="ig" href="https://www.instagram.com/hobasalon/" target="_blank" rel="noopener" aria-label="إنستقرام"><i class="fa-brands fa-instagram"></i><span class="lbl">إنستقرام</span></a>
-            <a class="tt" href="https://vt.tiktok.com/ZSuyUYRmM/" target="_blank" rel="noopener" aria-label="تيك توك"><i class="fa-brands fa-tiktok"></i><span class="lbl">تيك توك</span></a>
-            <a class="sc" href="https://www.snapchat.com/add/hoba_salon?share_id=ucyETMV7TVCS_CaU716qTA&locale=ar_SA@calendar=gregorian" target="_blank" rel="noopener" aria-label="سناب شات"><i class="fa-brands fa-snapchat"></i><span class="lbl">سناب شات</span></a>
-          </div>
+      <div>
+        <h4>حساباتنا</h4>
+        <div class="social">
+           <a class="ig" href="https://www.instagram.com/hobasalon/" target="_blank" rel="noopener" aria-label="إنستقرام"><i class="fa-brands fa-instagram"></i><span class="lbl">إنستقرام</span></a>
+          <a class="tt" href="https://vt.tiktok.com/ZSuyUYRmM/" target="_blank" rel="noopener" aria-label="تيك توك"><i class="fa-brands fa-tiktok"></i><span class="lbl">تيك توك</span></a>
+          <a class="sc" href="https://www.snapchat.com/add/hoba_salon?share_id=ucyETMV7TVCS_CaU716qTA&locale=ar_SA@calendar=gregorian" target="_blank" rel="noopener" aria-label="سناب شات"><i class="fa-brands fa-snapchat"></i><span class="lbl">سناب شات</span></a>
         </div>
-    </div>
-    <div class="footer-bottom">
-      <div><a href="#">سياسة الخصوصية</a><a href="#">الشروط والأحكام</a></div>
-      <p>جميع الحقوق محفوظة © 2026 لمؤسسة <a href="https://rwabts.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">روابط الرقمية لتقنية المعلومات</a></p>
+      </div>
     </div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <a class="wa-float" href="https://wa.me/966544277897" target="_blank" rel="noopener" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
   </div>
 </footer>`;
 
+  const SCROLL_PROGRESS = '<div class="scroll-progress"></div>';
+  const BACK_TOP = '<button class="back-top" id="backTop" aria-label="العودة للأعلى"><span class="material-symbols-outlined">arrow_upward</span></button>';
+
   function mount(id, html) {
     const el = document.getElementById(id);
     if (el) el.outerHTML = html;
   }
 
-  async function load() {
-    const mounts = [
-      { id: 'header-mount', file: 'components/header.html', html: HEADER },
-      { id: 'footer-mount', file: 'components/footer.html', html: FOOTER }
-    ];
-    for (const m of mounts) {
-      let done = false;
-      try {
-        const res = await fetch(m.file);
-        if (res.ok) {
-          const text = await res.text();
-          mount(m.id, text.replace(/<!--[\s\S]*?-->/, '').trim());
-          done = true;
-        }
-      } catch (e) {}
-      if (!done) mount(m.id, m.html);
+  function injectScaffold() {
+    if (!document.querySelector('.scroll-progress')) {
+      document.body.insertAdjacentHTML('afterbegin', SCROLL_PROGRESS);
     }
+    if (!document.getElementById('backTop')) {
+      document.body.insertAdjacentHTML('beforeend', BACK_TOP);
+    }
+  }
+
+  function markActiveLinks() {
     const path = location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.site-header .nav a').forEach(a => {
-      if (a.getAttribute('href') === path) { a.classList.add('active'); }
+      if (a.getAttribute('href') === path) a.classList.add('active');
     });
     document.querySelectorAll('.mobile-menu a[href]').forEach(a => {
       if (a.getAttribute('href') === path && !a.classList.contains('btn')) a.classList.add('active');
     });
+  }
+
+  function load() {
+    injectScaffold();
+    mount('header-mount', HEADER);
+    mount('footer-mount', FOOTER);
+    markActiveLinks();
     if (window.initSiteInteractions) window.initSiteInteractions();
   }
 
