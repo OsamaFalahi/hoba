@@ -97,8 +97,12 @@
           const text = await res.text();
           mount(m.id, text.replace(/<!--[\s\S]*?-->/, '').trim());
           done = true;
+        } else {
+          console.warn(`[include] Failed to fetch "${m.file}" (HTTP ${res.status}); using inline fallback.`);
         }
-      } catch (e) {}
+      } catch (e) {
+        console.warn(`[include] Error fetching "${m.file}"; using inline fallback.`, e);
+      }
       if (!done) mount(m.id, m.html);
     }
     const path = location.pathname.split('/').pop() || 'index.html';
