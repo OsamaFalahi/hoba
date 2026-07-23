@@ -102,24 +102,26 @@
       const video = item.querySelector('video');
       const btn = item.querySelector('.play-btn');
       if (!video || !btn) return;
-      btn.addEventListener('click', () => {
+      const togglePlay = () => {
         if (video.paused) {
-          video.play().catch(() => {});
-          item.classList.add('is-playing');
+          const played = video.play();
+          if (played && typeof played.then === 'function') {
+            played
+              .then(() => item.classList.add('is-playing'))
+              .catch(err => {
+                item.classList.remove('is-playing');
+                console.warn('[gallery] Unable to play video.', err);
+              });
+          } else {
+            item.classList.add('is-playing');
+          }
         } else {
           video.pause();
           item.classList.remove('is-playing');
         }
-      });
-      video.addEventListener('click', () => {
-        if (video.paused) {
-          video.play().catch(() => {});
-          item.classList.add('is-playing');
-        } else {
-          video.pause();
-          item.classList.remove('is-playing');
-        }
-      });
+      };
+      btn.addEventListener('click', togglePlay);
+      video.addEventListener('click', togglePlay);
       video.addEventListener('ended', () => item.classList.remove('is-playing'));
       video.addEventListener('pause', () => item.classList.remove('is-playing'));
     });
