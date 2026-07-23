@@ -74,7 +74,7 @@
       <div><a href="#">سياسة الخصوصية</a><a href="#">الشروط والأحكام</a></div>
       <p>جميع الحقوق محفوظة © 2026 لمؤسسة <a href="https://rwabts.com/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">روابط الرقمية لتقنية المعلومات</a></p>
     </div>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <a class="wa-float" href="https://wa.me/966544277897" target="_blank" rel="noopener" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
   </div>
 </footer>`;
